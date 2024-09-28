@@ -11,7 +11,7 @@
 /* Create a function named FahrenheitToCelsius() containing a single parameter named degree. 
 Insert a statement that returns the value of degree minus 32 and then divided by 1.8 */
 
-FahrenheitToCelsius(degree) 
+function FahrenheitToCelsius(degree) 
 {
       return (degree-32) / 1.8;
 }
@@ -25,7 +25,7 @@ document.getElementById("cValue").onchange = function() {
 /* Create a function named CelsiusToFahrenheit() containing a single parameter named degree. 
 Insert a statement that returns the value of degree minus 32 and then divided by 1.8 */
 
-CelsiusToFahrenheit(degree) 
+function CelsiusToFahrenheit(degree) 
 {
       return (degree * 1.8) + 32;
 
