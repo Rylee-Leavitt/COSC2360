@@ -16,13 +16,10 @@ FahrenheitToCelsius(degree)
       return (degree-32) / 1.8;
 }
 
-//onchange event handler f-c
-
 document.getElementById("cValue").onchange = function() {
       // Declare a variable named cDegree equal to the value of the element with the id "cValue"
       var cDegree = document.getElementById("cValue").value;
       document.getElementById("cValue").value = CelsiusToFahrenheit(cDegree);
-      
 }
 
 /* Create a function named CelsiusToFahrenheit() containing a single parameter named degree. 
@@ -41,4 +38,10 @@ document.getElementById("fValue").onchange = function() {
       var fDegree = document.getElementById("fValue").value;
       document.getElementById("fValue").value = FahrenheitToCelsius(fDegree);
       
+}
+
+document.getElementById("cValue").onchange = function() {
+      // Declare a variable named cDegree equal to the value of the element with the id "cValue"
+      var cDegree = document.getElementById("cValue").value;
+      document.getElementById("cValue").value = CelsiusToFahrenheit(cDegree);
 }
