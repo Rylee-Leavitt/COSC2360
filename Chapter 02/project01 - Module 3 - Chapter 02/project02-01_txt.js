@@ -1,44 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <!--
-      JavaScript 7th Edition
+/*    JavaScript 7th Edition
       Chapter 2
-      Hands-on Project 2-1
+      Project 02-01
 
+      Celsius <-> Farenheit Coverter
       Author: Rylee Leavitt
-      Date:   9/23/24
+      Date:   9/23/2024
 
-      Filename: index.htm
-   -->
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-   <title>Hands-on Project 2-1</title>
-   <link rel="stylesheet" href="styles.css" />
-   <script src="project02-01_txt.js"defer></script>
-</head>
+      Filename: project02-01.js
+ */
+/* Create a function named FahrenheitToCelsius() containing a single parameter named degree. 
+Insert a statement that returns the value of degree minus 32 and then divided by 1.8 */
 
-<body>
-   <header>
-      <h1>Hands-on Project 2-1</h1>
-   </header>
+function FahrenheitToCelsius(degree) {
+ return (degree-32) / 1.8;
+}
 
-   <article>
-      <h2>Fahrenheit (&#176; F) to Celsius (&#176; C) converter</h2>
-      <form>
-         <div>
-            <h3>Temp in &#176; F</h3>
-            <input type="number" id="fValue" value="32" />
-         </div>
-         <div id="arrow">&harr;</div>
-         <div>
-            <h3>Temp in &#176; C</h3>
-            <input type="number" id="cValue" value="0" />            
-         </div>
-     </form>
-     <footer>
-        Enter a Fahrenheit or Celsius temperature in either input box and press Tab to convert.
-     </footer>
-   </article>
-</body>
-</html>
+/* Create a function named CelsiusToFahrenheit() containing a single parameter named degree. 
+Insert a statement that returns the value of degree minus 32 and then divided by 1.8 */
+
+function CelsiusToFahrenheit(degree) {
+      return degree * 1.8 + 32;
+}
+
+//onchange event handler f-c
+
+document.getElementById("cValue").onchange = function() {
+      // Declare a variable named cDegree equal to the value of the element with the id "cValue"
+      var cDegree = document.getElementById("cValue").value;
+      document.getElementById("fValue").value = CelsiusToFahrenheit(cDegree);
+      
+}
+
+//onchange event handler c-f
+
+document.getElementById("fValue").onchange = function() {
+      // Declare a variable named fDegree equal to the value of the element with the id "fValue"
+      var fDegree = document.getElementById("fValue").value;
+      document.getElementById("cValue").value = FahrenheitToCelsius(fDegree);
+      
+}
