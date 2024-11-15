@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 7th Edition
+      Chapter 6
+      Midterm
+
+      Author: Rylee Leavitt
+      Date: 11/14/2024
+
+      Filename: Midterm-Project.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Midterm-Project</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="Midterm-Project.js" defer></script>
+   <style>
+      form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      fieldset {
+         width: 80%;
+         max-width: 400px;
+         margin: 10px;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+      }
+      .checkbox-group {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+      }
+      .checkbox-group label {
+         width: 45%;
+         margin: 5px 0;
+      }
+      .center {
+         display: block;
+         margin: 10px auto;
+      }
+      footer {
+         text-align: center;
+         margin-top: 20px;
+      }
+   </style>
+</head>
+<body>
+   <header>
+   </header>
+
+   <img src="PizzaTimeBanner.png" alt="Pizza time Banner" height="720" width="960" class="center">
+   <article>
+      <h1>Build Your Pizza</h1>
+      <form>
+         <fieldset>
+            <legend>Crust</legend>
+            <select id="crust" size="4">
+               <option>Select Crust</option>
+               <option>Hand Tossed</option>
+               <option>Chicago Style</option>
+               <option>Thin</option>
+               <option>Gluten-Free Crust</option>   
+               <option>Stuffed Crust</option>            
+            </select>            
+         </fieldset>
+
+         <fieldset>
+            <legend>Toppings</legend>
+            <div class="checkbox-group">
+               <label><input type="checkbox" name="toppings" value="Cheddar Cheese"> Cheddar Cheese</label>
+               <label><input type="checkbox" name="toppings" value="Mozzarella Cheese"> Mozzarella Cheese</label>
+               <label><input type="checkbox" name="toppings" value="Parmesan Cheese"> Parmesan Cheese</label>
+               <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label>
+               <label><input type="checkbox" name="toppings" value="Sausage"> Sausage</label>
+               <label><input type="checkbox" name="toppings" value="Peppers"> Peppers</label>
+               <label><input type="checkbox" name="toppings" value="Canadian Bacon"> Canadian Bacon</label>
+               <label><input type="checkbox" name="toppings" value="Bacon Bits"> Bacon Bits</label>
+               <label><input type="checkbox" name="toppings" value="Spinach Artichoke"> Spinach Artichoke</label>
+               <label><input type="checkbox" name="toppings" value="Pineapple"> Pineapple</label>   
+            </div>
+         </fieldset>
+
+         <fieldset>
+            <legend>Payment Method</legend>
+            <select id="payment" size="4">
+               <option>Select Payment Method</option>
+               <option>Debit Card</option>
+               <option>Credit Card</option>
+               <option>Apple Pay</option>
+               <option>Freddy FrazBear App</option>
+            </select>              
+         </fieldset>
+         
+         <input type="button" value="Checkout" id="selectPizza" /> 
+         <img id="WayToGo" src="WayToGo.png" alt="Way To Go" class="hidden"> 
+         <img id="FreddySmile" src="FreddySmile.png" alt="Freddy Smile" class="hidden">
+        
+         <footer>
+            <img src="freddylogo.png" alt="Logo" height="375" width="500" class="center">
+         </footer>
+
+      </form>
+      <p id="Pizza"></p>
+   </article>      
+</body>
+</html>
